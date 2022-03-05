@@ -49,13 +49,17 @@
         &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
     &lt;/a&gt;
 &lt;/span&gt;
-&lt;/h1&gt;&lt;img style=&#34;float: left; margin-right: 20px;&#34; width=&#34;300&#34; height=&#34;300&#34; src=&#34;https://clav.dev/profile.jpeg&#34;&gt;
+&lt;/h1&gt;&lt;div&gt;
+&lt;div class=&#34;image&#34;&gt;
+&lt;img style=&#34;float: left; margin-right: 20px; position: relative;&#34; width=&#34;300&#34; height=&#34;300&#34; src=&#34;https://clav.dev/profile.jpeg&#34;&gt;
+&lt;/div&gt;
+&lt;article style=&#34;display: grid; align-items: center; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); grid-auto-rows: minmax(70px, auto);&#34;&gt;
 &lt;p&gt;
-I&#39;m currently a software engineer at [Xendit](https://www.xendit.co/en/), a [Y Combinator](https://www.ycombinator.com/topcompanies) company whose mission is to build Southeast Asia&#39;s financial infrastructure through a suite of products, from payments processing to loans, delivered through APIs.
+I&#39;m currently a software engineer at &lt;a href=&#34;https://www.xendit.co/en/&#34;&gt;Xendit&lt;/a&gt;, a &lt;a href=&#34;https://www.ycombinator.com/topcompanies&#34;&gt;Y Combinator&lt;/a&gt; company whose mission is to build Southeast Asia&#39;s financial infrastructure through a suite of products, from payments processing to loans, delivered through APIs.
 &lt;p&gt;I&amp;rsquo;ve started this site to condense my thoughts on things I&amp;rsquo;m reading, and to catalogue them for future reference.&lt;/p&gt;
 &lt;/p&gt;
-&lt;br&gt; 
-</description>
+&lt;/article&gt;
+&lt;/div&gt;</description>
     </item>
     
     <item>

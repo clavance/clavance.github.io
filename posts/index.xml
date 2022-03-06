@@ -5,13 +5,13 @@
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h1>&lt;h4 id="getting-your-foot-in-the-door" >Getting your foot in the door
+&lt;/h1>&lt;h3 id="getting-your-foot-in-the-door" >Getting your foot in the door
 &lt;span>
 &lt;a href="#getting-your-foot-in-the-door">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h4>&lt;ul>
+&lt;/h3>&lt;ul>
 &lt;li>Get a &lt;em>warm introduction&lt;/em> from:
 &lt;ul>
 &lt;li>angels and seed investors&lt;/li>
@@ -59,13 +59,13 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h4 id="1-market-sizing" >1: Market Sizing
+&lt;h3 id="1-market-sizing" >1: Market Sizing
 &lt;span>
 &lt;a href="#1-market-sizing">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h4>&lt;ul>
+&lt;/h3>&lt;ul>
 &lt;li>
 &lt;p>&lt;em>You&lt;/em> need to help the VC understand your market size&lt;/p>
 &lt;ul>
@@ -131,13 +131,13 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h5 id="2-team" >2: Team
+&lt;h3 id="2-team" >2: Team
 &lt;span>
 &lt;a href="#2-team">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h5>&lt;/li>
+&lt;/h3>&lt;/li>
 &lt;li>
 &lt;p>We agree the opportunity exists. Why &lt;em>you?&lt;/em>&lt;/p>
 &lt;ul>
@@ -160,13 +160,13 @@
 &lt;/li>
 &lt;li>
 &lt;p>How will you build the right team around you? What makes you a natural-born leader? Learned leader? Why would people quit their jobs to work for you?&lt;/p>
-&lt;h4 id="3-product" >3: Product
+&lt;h3 id="3-product" >3: Product
 &lt;span>
 &lt;a href="#3-product">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h4>&lt;/li>
+&lt;/h3>&lt;/li>
 &lt;li>
 &lt;p>No VC expects you to correctly predict the needs of the market&lt;/p>
 &lt;/li>
@@ -194,13 +194,13 @@
 &lt;p>Always demonstrate &lt;em>strong beliefs, weakly held&lt;/em>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h4 id="4go-to-market" >4: Go-to-Market
+&lt;h3 id="4go-to-market" >4: Go-to-Market
 &lt;span>
 &lt;a href="#4go-to-market">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h4>&lt;ul>
+&lt;/h3>&lt;ul>
 &lt;li>
 &lt;p>Does the business model support customer acquisition profitably? The VC wants to know whether your business can be viable &lt;em>in the long run&lt;/em>&lt;/p>
 &lt;/li>
@@ -250,13 +250,13 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h4 id="5-next-financing-round" >5: Next Financing Round
+&lt;h3 id="5-next-financing-round" >5: Next Financing Round
 &lt;span>
 &lt;a href="#5-next-financing-round">
 &lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
 &lt;/a>
 &lt;/span>
-&lt;/h4>&lt;ul>
+&lt;/h3>&lt;ul>
 &lt;li>
 &lt;p>what milestones do you intend to accomplish with this round of money?&lt;/p>
 &lt;/li>

@@ -1,41 +1,291 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Clavance Lim</title>
-    <link>https://clav.dev/posts/</link>
-    <description>Clavance Lim (Posts)</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <lastBuildDate>Sat, 05 Mar 2022 03:46:01 +0800</lastBuildDate>
-    
-    <atom:link href="https://clav.dev/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Secrets of Sand Hill Road</title>
-      <link>https://clav.dev/posts/sand-hill-road/</link>
-      <pubDate>Sat, 05 Mar 2022 03:46:01 +0800</pubDate>
-      
-      <guid>https://clav.dev/posts/sand-hill-road/</guid>
-      <description>&lt;p&gt;This is a summary.&lt;/p&gt;
-&lt;h1 id=&#34;my-main-heading&#34; &gt;My main heading
-&lt;span&gt;
-    &lt;a href=&#34;#my-main-heading&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h1&gt;&lt;p&gt;Test.&lt;/p&gt;
-&lt;h2 id=&#34;markdown-heading&#34; &gt;Markdown heading
-&lt;span&gt;
-    &lt;a href=&#34;#markdown-heading&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Wow&lt;/li&gt;
-&lt;li&gt;Amazing!&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Clavance Lim</title><link>https://clav.dev/posts/</link><description>Clavance Lim (Posts)</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><lastBuildDate>Sat, 05 Mar 2022 03:46:01 +0800</lastBuildDate><atom:link href="https://clav.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Secrets of Sand Hill Road</title><link>https://clav.dev/posts/sand-hill-road/</link><pubDate>Sat, 05 Mar 2022 03:46:01 +0800</pubDate><guid>https://clav.dev/posts/sand-hill-road/</guid><description>&lt;p>&lt;em>&amp;ldquo;He slept like a baby every night - waking up every few hours crying&amp;hellip;&lt;/em>&amp;rdquo;&lt;/p>
+&lt;h1 id="the-art-of-the-pitch" >The Art of the Pitch
+&lt;span>
+&lt;a href="#the-art-of-the-pitch">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;h4 id="getting-your-foot-in-the-door" >Getting your foot in the door
+&lt;span>
+&lt;a href="#getting-your-foot-in-the-door">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h4>&lt;ul>
+&lt;li>Get a &lt;em>warm introduction&lt;/em> from:
+&lt;ul>
+&lt;li>angels and seed investors&lt;/li>
+&lt;li>law firms, since they work with a lot of startups forming companies, and work with a lot of VCs - and introducing their best startup clients to VCs helps them too&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ul>
+&lt;li>
+&lt;p>You&amp;rsquo;ll need:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>likability&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>networking&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>hustle&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>showing up&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>following up&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>persistence&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>salesmanship&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>confidence&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>experience&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>storytelling&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>luck!&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="1-market-sizing" >1: Market Sizing
+&lt;span>
+&lt;a href="#1-market-sizing">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h4>&lt;ul>
+&lt;li>
+&lt;p>&lt;em>You&lt;/em> need to help the VC understand your market size&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>e.g. when Lyft was pitching, naturally, people evaluating the opportunity would use the existing taxi market as a proxy for market size, then make a guess about how much of that market Lyft could capture&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Lyft argued that people made assumptions about the availability of taxis, security of taxis, convenience of hialing taxis, etc., but with GPS, smartphones and apps, the market was &lt;em>way&lt;/em> bigger&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>also, drivers wouldn&amp;rsquo;t need to buy taxi medallions -&amp;gt; more supply of drivers -&amp;gt; more customers -&amp;gt; more demand for drivers -&amp;gt; cycle of &lt;em>network effects&lt;/em>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;em>Network effects&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>actually commonly applicable, not just to companies like Lyft, Facebook, Airbnb&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>e.g. Freenome argued that if cancer screening techniques improved (became less invasive) + better predictive value -&amp;gt; people would get more cancer screenings -&amp;gt; more people get early detection -&amp;gt; bigger market&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>What if you&amp;rsquo;re going into an &lt;em>existing market&lt;/em>?&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>you need to explain &lt;em>what&lt;/em> and &lt;em>why&lt;/em> macro trends in that market are evolving, and why &lt;em>you&lt;/em> have an opportunity to own it&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>e.g. Okta, a SaaS for managing log-ins&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Microsoft Active Directory already existed, and was the market leader - but it was for applications managed &lt;em>inside&lt;/em> a company&amp;rsquo;s IT environment&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Okta argued: the rise of SaaS applications -&amp;gt; companies will use many more external applications -&amp;gt; different teams will use disparate applications e.g. HR, Sales, Engineering will each need to use their own SaaS applications, each of which are &lt;em>externally&lt;/em> developed and managed -&amp;gt; companies need new ways to manage employees' access and security -&amp;gt; new market opportunity&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sounds like a stretch? Okta&amp;rsquo;s market cap is $25bn (and was $45bn last year)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>What if the market doesn&amp;rsquo;t exist yet?&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>you might have to &lt;em>imagine&lt;/em> that a new market &lt;em>will&lt;/em> rise because of some new technology&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>e.g. Burbn argued that iPhones would become dominant -&amp;gt; people would want a photo-sharing app for the iPhone&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>people shared photos before the iPhone - but that market size clearly didn&amp;rsquo;t stay the same&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>(Burbn is Instagram)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h5 id="2-team" >2: Team
+&lt;span>
+&lt;a href="#2-team">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h5>&lt;/li>
+&lt;li>
+&lt;p>We agree the opportunity exists. Why &lt;em>you?&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>ideas are a dime a dozen, execution sets the winners apart from the pretenders&amp;hellip;&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Why are &lt;em>you&lt;/em> uniquely qualified to win the market? What unique skills or &lt;em>edge&lt;/em> do you have? i.e. &lt;em>founder-market fit&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>e.g. Nicira was founded by someone who had a PhD in that subject&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>it doesn&amp;rsquo;t have to be so specific, you could have a skill in a go-to-market strategy in your domain etc.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Talk about your wins, talk about your failures. What do they say about your likelihood of succeeding in your current venture?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>How will you build the right team around you? What makes you a natural-born leader? Learned leader? Why would people quit their jobs to work for you?&lt;/p>
+&lt;h4 id="3-product" >3: Product
+&lt;span>
+&lt;a href="#3-product">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h4>&lt;/li>
+&lt;li>
+&lt;p>No VC expects you to correctly predict the needs of the market&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Your product probably won&amp;rsquo;t be what you pitched&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>They&amp;rsquo;re evaluating &lt;em>the process by which you came to your initial product plan&lt;/em>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>How does your brain work?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>What data have you incorporated from the market?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>How is your product 10x better than incumbents?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Basically, your thought process should be robust enough to adapt to changing market demands&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Always demonstrate &lt;em>strong beliefs, weakly held&lt;/em>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="4go-to-market" >4: Go-to-Market
+&lt;span>
+&lt;a href="#4go-to-market">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h4>&lt;ul>
+&lt;li>
+&lt;p>Does the business model support customer acquisition profitably? The VC wants to know whether your business can be viable &lt;em>in the long run&lt;/em>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>How will you acquire customers?&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Outside sales force? Can your product&amp;rsquo;s selling price support this?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>brand marketing? online forms of customer acquisition?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>how to the costs of these activities relate to the lifetime value of a customer?&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>You don&amp;rsquo;t need robust financial models, you need a &lt;em>framework&lt;/em>, so that VCs understand the way you think about customer acquisition, and how deeply you understand your audience&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>e.g. Okta&amp;rsquo;s GTM strategy: sell to SMEs - SMEs are more open to new technologies + don&amp;rsquo;t have large teams of people to run things -&amp;gt; need an affordable outsourced software&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>in reality, enterprise sales was better -&amp;gt; large companies had lots of individual SaaS applications deployed across many departments -&amp;gt; better value proposition&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>i.e. you don&amp;rsquo;t need to be right, you need to &lt;em>apply real-world experience against theories grounded in reasonable assumptions&lt;/em>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Repeat: you&amp;rsquo;ll probably pivot, whether minor or major&lt;/p>
+&lt;ul>
+&lt;li>Tiny Speck game -&amp;gt; Speck -&amp;gt; Slack&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Master the domain you&amp;rsquo;re proposing to attack, think about every important detail of your business in a way that shows preparation and conviction&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>e.g. VC attacks your proposal in meeting: you can&amp;rsquo;t just abandon your plan and pivot immediately, you&amp;rsquo;re supposed to have spent eons thinking about it&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>thoughtfully discuss how you arrived at your conclusions, defend, listen to feedback, incorporate it into your thinking, adjust as appropriate&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="5-next-financing-round" >5: Next Financing Round
+&lt;span>
+&lt;a href="#5-next-financing-round">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h4>&lt;ul>
+&lt;li>
+&lt;p>what milestones do you intend to accomplish with this round of money?&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>your VC is probably projecting ahead to the next round to gauge the level of market risk in funding you&lt;/p>
+&lt;ul>
+&lt;li>they need you to achieve your aims, they don&amp;rsquo;t want to be and can&amp;rsquo;t be your only capital provider at the next round&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>how much are you raising? will you have enough money to accomplish what you say you&amp;rsquo;re going to accomplish, such that you can raise your next round at a higher valuation?&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>if not, you need to discuss:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>raising more money at this round, to have enough money to reach your milestones&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>lowering the current valuation&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>finding other means of increasing their confidence around your forecast&amp;hellip;&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>generally, you want to aim to double your valuation at the next round&lt;/p>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>

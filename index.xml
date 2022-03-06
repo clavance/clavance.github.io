@@ -1,66 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Clavance Lim</title>
-    <link>https://clav.dev/</link>
-    <description>Clavance Lim</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    
-    <atom:link href="https://clav.dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://clav.dev/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://clav.dev/about/</guid>
-      <description>&lt;h1 id=&#34;about&#34; &gt;About
-&lt;span&gt;
-    &lt;a href=&#34;#about&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h1&gt;&lt;img style=&#34;float: left; margin-right: 20px; position: relative;&#34; width=&#34;300&#34; height=&#34;300&#34; src=&#34;https://clav.dev/profile.jpeg&#34;&gt;
-&lt;p&gt;
-I&#39;m currently a software engineer at &lt;a href=&#34;https://www.xendit.co/en/&#34;&gt;Xendit&lt;/a&gt;, a &lt;a href=&#34;https://www.ycombinator.com/topcompanies&#34;&gt;Y Combinator&lt;/a&gt; company whose mission is to build Southeast Asia&#39;s financial infrastructure through a suite of products, from payments processing to loans, delivered through APIs.
-&lt;p&gt;I&amp;rsquo;ve started this site to condense my thoughts on things I&amp;rsquo;m reading, and to catalogue them for future reference.&lt;/p&gt;
-&lt;/p&gt;
-&lt;br/&gt;
-&lt;br/&gt;
-&lt;br/&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://clav.dev/resources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://clav.dev/resources/</guid>
-      <description>&lt;h1 id=&#34;articles&#34; &gt;Articles
-&lt;span&gt;
-    &lt;a href=&#34;#articles&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h1&gt;&lt;h1 id=&#34;books&#34; &gt;Books
-&lt;span&gt;
-    &lt;a href=&#34;#books&#34;&gt;
-        &lt;svg viewBox=&#34;0 0 28 23&#34; height=&#34;100%&#34; width=&#34;19&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;&lt;path d=&#34;M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;path d=&#34;M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71&#34; fill=&#34;none&#34; stroke-linecap=&#34;round&#34; stroke-miterlimit=&#34;10&#34; stroke-width=&#34;2&#34;/&gt;&lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/span&gt;
-&lt;/h1&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://clav.dev/sketches/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://clav.dev/sketches/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Clavance Lim</title><link>https://clav.dev/</link><description>Clavance Lim</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><atom:link href="https://clav.dev/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://clav.dev/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://clav.dev/about/</guid><description>&lt;h1 id="about" >About
+&lt;span>
+&lt;a href="#about">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;img style="float: left; margin-right: 20px; position: relative;" width="300" height="300" src="https://clav.dev/profile.jpeg">
+&lt;p>
+I'm currently a software engineer at &lt;a href="https://www.xendit.co/en/">Xendit&lt;/a>, a &lt;a href="https://www.ycombinator.com/topcompanies">Y Combinator&lt;/a> company whose mission is to build Southeast Asia's financial infrastructure through a suite of products, from payments processing to loans, delivered through APIs.
+&lt;p>I&amp;rsquo;ve started this site to condense my thoughts on things I&amp;rsquo;m reading, and to catalogue them for future reference.&lt;/p>
+&lt;/p>
+&lt;br/>
+&lt;br/>
+&lt;br/></description></item><item><title/><link>https://clav.dev/resources/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://clav.dev/resources/</guid><description>&lt;h1 id="articles" >Articles
+&lt;span>
+&lt;a href="#articles">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1>&lt;h1 id="books" >Books
+&lt;span>
+&lt;a href="#books">
+&lt;svg viewBox="0 0 28 23" height="100%" width="19" xmlns="http://www.w3.org/2000/svg">&lt;path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>&lt;/svg>
+&lt;/a>
+&lt;/span>
+&lt;/h1></description></item><item><title/><link>https://clav.dev/sketches/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://clav.dev/sketches/</guid><description/></item></channel></rss>

@@ -256,9 +256,6 @@
     if (path === "/") {
       return { name: "home", title: "Clavance Lim", description: "Software and sound in a cinematic single-page experience." };
     }
-    if (path === "/about/") {
-      return { name: "about", title: "About - Clavance Lim", description: "About Clavance Lim." };
-    }
     if (path === "/posts/") {
       return { name: "posts", title: "Posts - Clavance Lim", description: "Writing and notes by Clavance Lim." };
     }
@@ -325,36 +322,6 @@
     `;
   }
 
-  function renderAbout() {
-    return `
-      <section class="page-hero surface">
-        <p class="eyebrow">About</p>
-        <h1>Building systems. Making texture.</h1>
-        <p>I’m interested in the overlap between software engineering and music production: structure, iteration, rhythm, and the small details that make an experience feel alive.</p>
-      </section>
-      <section class="two-column">
-        <article class="card surface">
-          <h2>Approach</h2>
-          <p>I like products and websites that feel calm, precise, and slightly surprising. On the engineering side, that usually means thoughtful interfaces, strong fundamentals, and room for experimentation. On the music side, it means sound design, layering, timing, and shaping atmosphere.</p>
-          <p style="margin-top:18px;">This site is meant to sit in the middle of those interests: part portfolio, part notebook, part evolving visual instrument.</p>
-        </article>
-        <aside class="stack surface">
-          <h2>Contact</h2>
-          <ul>
-            <li>
-              <strong><a href="https://github.com/clavance" target="_blank" rel="noreferrer">GitHub</a></strong>
-            </li>
-            <li>
-              <strong><a href="https://linkedin.com/in/clavance" target="_blank" rel="noreferrer">LinkedIn</a></strong>
-            </li>
-            <li>
-              <strong><a href="https://calendly.com/clavance" target="_blank" rel="noreferrer">Book a Time</a></strong>
-            </li>
-          </ul>
-        </aside>
-      </section>
-    `;
-  }
 
   function renderPost(post) {
     return `
@@ -454,8 +421,6 @@
       appView.innerHTML = renderHome();
     } else if (route.name === "posts") {
       appView.innerHTML = renderPosts();
-    } else if (route.name === "about") {
-      appView.innerHTML = renderAbout();
     } else if (route.name === "post") {
       appView.innerHTML = renderPost(route.post);
     } else {

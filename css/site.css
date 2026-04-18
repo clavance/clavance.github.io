@@ -15,6 +15,35 @@
   --radius: 28px;
 }
 
+body.light-mode {
+  --bg: #f0f3fa;
+  --bg-deep: #e4e9f5;
+  --panel: rgba(255, 255, 255, 0.7);
+  --panel-strong: rgba(255, 255, 255, 0.9);
+  --line: rgba(0, 0, 0, 0.1);
+  --text: #0d1420;
+  --muted: #4a5a7a;
+  --soft: #7a8aaa;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.1);
+  --cyan: #0077cc;
+  --pink: #cc00b8;
+  --violet: #6a4aff;
+  color-scheme: light;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(0, 119, 204, 0.08), transparent 24%),
+    radial-gradient(circle at 82% 28%, rgba(204, 0, 184, 0.08), transparent 26%),
+    linear-gradient(135deg, #f0f3fa 0%, #e8edf5 48%, #e4e9f5 100%);
+}
+
+body.light-mode::before {
+  opacity: 0.06;
+}
+
+body.light-mode .home-canvas {
+  mix-blend-mode: multiply;
+  opacity: 0.35;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -201,6 +230,38 @@ img {
   filter:
     drop-shadow(0 0 6px rgba(96, 244, 255, 0.55))
     drop-shadow(0 0 12px rgba(255, 95, 225, 0.34));
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--cyan);
+  cursor: pointer;
+  opacity: 0.98;
+  flex: 0 0 auto;
+}
+
+.theme-toggle svg {
+  width: 78%;
+  height: 78%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  opacity: 1;
+  color: #b3fbff;
 }
 
 @keyframes brand-caret-blink {

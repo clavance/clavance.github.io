@@ -15,6 +15,7 @@
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let audioEnabled = false;
   let homeScene = "waves";
+  let postsPage = 0;
   const homeScenes = ["waves", "fractal", "circles", "patterns", "code"];
   let patternField = {
     x: window.innerWidth * 0.5,

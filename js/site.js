@@ -395,6 +395,17 @@
       });
     });
 
+    appView.querySelectorAll("[data-page-shift]").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const shift = Number(link.getAttribute("data-page-shift")) || 0;
+        postsPage += shift;
+        appView.innerHTML = renderPosts();
+        attachRouteLinks();
+        window.scrollTo(0, 0);
+      });
+    });
+
     const hero = appView.querySelector(".hero");
     if (hero) {
       let swipeAccum = 0;
@@ -428,6 +439,7 @@
     if (route.name === "home") {
       appView.innerHTML = renderHome();
     } else if (route.name === "posts") {
+      postsPage = 0;
       appView.innerHTML = renderPosts();
     } else if (route.name === "post") {
       appView.innerHTML = renderPost(route.post);

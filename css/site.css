@@ -571,6 +571,43 @@ img {
   line-height: 0.96;
 }
 
+.article h2 {
+  margin: 36px 0 10px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #e8f0fc;
+  letter-spacing: -0.02em;
+}
+
+.article h3 {
+  margin: 24px 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c4d4ee;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.article ol,
+.article ul {
+  margin: 0 0 18px;
+  padding-left: 24px;
+  color: #d6e2f4;
+}
+
+.article li {
+  margin-bottom: 10px;
+  line-height: 1.72;
+}
+
+.article li ul,
+.article li ol {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
 .article p {
   margin: 0 0 18px;
   color: #d6e2f4;

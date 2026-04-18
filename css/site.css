@@ -40,8 +40,9 @@ body.light-mode::before {
 }
 
 body.light-mode .home-canvas {
-  mix-blend-mode: multiply;
-  opacity: 0.35;
+  filter: invert(1);
+  mix-blend-mode: normal;
+  opacity: 1;
 }
 
 * {

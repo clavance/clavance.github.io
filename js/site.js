@@ -38,7 +38,7 @@
   const posts = [
     {
       slug: "sand-hill-road",
-      date: "7 March 2022",
+      date: "5 March 2022",
       title: "Secrets of Sand Hill Road",
       excerpt: "Reading notes on pitching, market sizing, venture expectations, and what founders need to communicate clearly.",
       description: "Notes on pitching, venture capital, and communicating market size.",
@@ -144,7 +144,7 @@
     },
     {
       slug: "lessons-in-management",
-      date: "23 May 2018",
+      date: "9 May 2018",
       title: "Lessons in Management",
       excerpt: "Notes on customer obsession, long-term thinking, and the habits that help teams stay adaptable under pressure.",
       description: "Notes on customer obsession, invention, and long-term thinking.",

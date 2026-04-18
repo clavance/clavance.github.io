@@ -39,6 +39,10 @@ body.light-mode::before {
   opacity: 0.06;
 }
 
+body.light-mode .ambient-backdrop-layer::before {
+  opacity: 0;
+}
+
 body.light-mode .home-canvas {
   filter: invert(1);
   mix-blend-mode: normal;

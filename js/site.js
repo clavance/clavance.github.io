@@ -363,7 +363,6 @@
       const href = normalizePath(link.getAttribute("href"));
       const isCurrent =
         (route.name === "home" && href === "/") ||
-        (route.name === "about" && href === "/about/") ||
         ((route.name === "posts" || route.name === "post") && href === "/posts/");
       if (isCurrent) {
         link.setAttribute("aria-current", "page");

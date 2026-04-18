@@ -304,22 +304,29 @@
   }
 
   function renderPosts() {
+    const POSTS_PER_PAGE = 10;
+    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+    const pagePosts = posts.slice(postsPage * POSTS_PER_PAGE, (postsPage + 1) * POSTS_PER_PAGE);
+
+    const pagination = totalPages > 1 ? `
+      <div class="posts-pagination">
+        ${postsPage > 0 ? `<a class="posts-page-link" data-page-shift="-1" href="#">← Previous</a>` : ""}
+        ${postsPage < totalPages - 1 ? `<a class="posts-page-link" data-page-shift="1" href="#">Next →</a>` : ""}
+      </div>
+    ` : "";
+
     return `
-      <section class="page-hero surface">
-        <p class="eyebrow">Posts</p>
-        <h1>Notes worth keeping.</h1>
-        <p>A small set of reading notes and ideas on management, startups, and building with more intention.</p>
-      </section>
-      <section class="grid posts-grid">
-        ${posts.map((post) => `
+      <section class="posts-list">
+        ${pagePosts.map((post) => `
           <article class="card surface">
             <p class="meta">${post.date}</p>
             <h3>${post.title}</h3>
             <p>${post.excerpt}</p>
-            <a class="article-link" href="/posts/${post.slug}/" data-route-link>Read article</a>
+            <a class="article-link" href="/posts/${post.slug}/" data-route-link>Read more →</a>
           </article>
         `).join("")}
       </section>
+      ${pagination}
     `;
   }
 

@@ -546,7 +546,7 @@ img {
 .contact-list a,
 .contact-list span {
   margin: 0;
-  color: #d2def0;
+  color: var(--muted);
   line-height: 1.75;
 }
 

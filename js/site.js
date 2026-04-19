@@ -37,6 +37,8 @@
     "{","}","(",")","[","]",";","=>","++","--","?.","??","&&","||","!==","===","<",">","+","-","*","/"
   ];
 
+  const commentsApiUrl = "https://comments.clav.workers.dev";
+  const turnstileSiteKey = "0x4AAAAAAC_usroHFVr0tdzx";
   const posts = Array.isArray(window.CLAV_POSTS) ? window.CLAV_POSTS : [];
 
   const pointer = {
@@ -356,10 +358,199 @@
           <p class="meta">${post.date}</p>
           <h1>${post.title}</h1>
           ${post.content}
+          <section class="comments-block" data-comments data-post-slug="${post.slug}" aria-label="Comments">
+            <div class="comments-header">
+              <p class="meta">Comments</p>
+              <p class="comments-note">Comments appear after moderation.</p>
+            </div>
+            <div class="comments-list" data-comments-list>
+              <p class="comments-empty">Loading comments...</p>
+            </div>
+            <form class="comments-form" data-comments-form>
+              <label>
+                <span>Name</span>
+                <input name="authorName" type="text" autocomplete="name" maxlength="80" required>
+              </label>
+              <label>
+                <span>Comment</span>
+                <textarea name="body" rows="5" maxlength="2000" required></textarea>
+              </label>
+              <div class="comments-turnstile" data-turnstile></div>
+              <button class="article-link comments-submit" type="submit">Submit comment →</button>
+              <p class="comments-status" data-comments-status role="status" aria-live="polite"></p>
+            </form>
+          </section>
           <p class="footer-note"><a class="article-link" href="/posts/" data-route-link>← Back to posts</a></p>
         </article>
       </div>
     `;
+  }
+
+  function hasTurnstileSiteKey() {
+    return Boolean(turnstileSiteKey);
+  }
+
+  function setCommentsStatus(root, message, type = "") {
+    const status = root.querySelector("[data-comments-status]");
+    if (!status) {
+      return;
+    }
+    status.textContent = message;
+    status.dataset.status = type;
+  }
+
+  function renderCommentsList(root, comments) {
+    const list = root.querySelector("[data-comments-list]");
+    if (!list) {
+      return;
+    }
+
+    list.textContent = "";
+
+    if (!comments.length) {
+      const empty = document.createElement("p");
+      empty.className = "comments-empty";
+      empty.textContent = "No comments yet.";
+      list.appendChild(empty);
+      return;
+    }
+
+    comments.forEach((comment) => {
+      const item = document.createElement("article");
+      item.className = "comment-item";
+
+      const header = document.createElement("div");
+      header.className = "comment-meta";
+
+      const name = document.createElement("strong");
+      name.textContent = comment.author_name || "Anonymous";
+
+      const date = document.createElement("time");
+      date.dateTime = comment.created_at || "";
+      date.textContent = comment.created_at
+        ? new Date(comment.created_at).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })
+        : "";
+
+      const body = document.createElement("p");
+      body.textContent = comment.body || "";
+
+      header.append(name, date);
+      item.append(header, body);
+      list.appendChild(item);
+    });
+  }
+
+  async function loadComments(root, postSlug) {
+    const list = root.querySelector("[data-comments-list]");
+    if (!list) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`${commentsApiUrl}/comments?postSlug=${encodeURIComponent(postSlug)}`);
+      if (!response.ok) {
+        throw new Error("Unable to load comments");
+      }
+      const data = await response.json();
+      renderCommentsList(root, Array.isArray(data.comments) ? data.comments : []);
+    } catch (_error) {
+      list.innerHTML = `<p class="comments-empty">Comments are unavailable for the moment.</p>`;
+    }
+  }
+
+  function renderTurnstile(root) {
+    const target = root.querySelector("[data-turnstile]");
+    if (!target || !hasTurnstileSiteKey()) {
+      setCommentsStatus(root, "Add the Turnstile site key to enable comment submissions.", "error");
+      const submit = root.querySelector(".comments-submit");
+      if (submit) {
+        submit.disabled = true;
+      }
+      return;
+    }
+
+    const tryRender = () => {
+      if (!window.turnstile || target.dataset.widgetId) {
+        return Boolean(target.dataset.widgetId);
+      }
+      const widgetId = window.turnstile.render(target, {
+        sitekey: turnstileSiteKey
+      });
+      target.dataset.widgetId = widgetId;
+      return true;
+    };
+
+    if (!tryRender()) {
+      window.setTimeout(tryRender, 500);
+    }
+  }
+
+  function attachCommentsForm(root, postSlug) {
+    const form = root.querySelector("[data-comments-form]");
+    if (!form) {
+      return;
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const submit = form.querySelector(".comments-submit");
+      const formData = new FormData(form);
+      const widgetId = root.querySelector("[data-turnstile]")?.dataset.widgetId;
+      const turnstileToken = widgetId && window.turnstile ? window.turnstile.getResponse(widgetId) : "";
+
+      if (!turnstileToken) {
+        setCommentsStatus(root, "Please complete the verification before submitting.", "error");
+        return;
+      }
+
+      if (submit) {
+        submit.disabled = true;
+      }
+      setCommentsStatus(root, "Submitting...", "");
+
+      try {
+        const response = await fetch(`${commentsApiUrl}/comments`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            postSlug,
+            authorName: formData.get("authorName"),
+            body: formData.get("body"),
+            turnstileToken
+          })
+        });
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Unable to submit comment");
+        }
+
+        form.reset();
+        if (widgetId && window.turnstile) {
+          window.turnstile.reset(widgetId);
+        }
+        setCommentsStatus(root, "Comment submitted for moderation.", "success");
+      } catch (error) {
+        setCommentsStatus(root, error.message || "Unable to submit comment.", "error");
+        if (widgetId && window.turnstile) {
+          window.turnstile.reset(widgetId);
+        }
+      } finally {
+        if (submit) {
+          submit.disabled = false;
+        }
+      }
+    });
+  }
+
+  function initComments(post) {
+    const root = appView.querySelector("[data-comments]");
+    if (!root || !post) {
+      return;
+    }
+
+    loadComments(root, post.slug);
+    renderTurnstile(root);
+    attachCommentsForm(root, post.slug);
   }
 
   function renderNotFound() {
@@ -472,6 +663,9 @@
     updateMeta(route);
     setRouteVisuals(route);
     attachRouteLinks();
+    if (route.name === "post") {
+      initComments(route.post);
+    }
     window.scrollTo(0, 0);
   }
 

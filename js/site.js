@@ -254,6 +254,9 @@
     if (path === "/about/") {
       return { name: "about", title: "About - Clavance Lim", description: "About Clavance Lim." };
     }
+    if (path === "/moderate/") {
+      return { name: "moderate", title: "Moderate Comments - Clavance Lim", description: "Moderate pending comments." };
+    }
 
     const postMatch = path.match(/^\/posts\/([^/]+)\/$/);
     if (postMatch) {
@@ -383,6 +386,33 @@
           <p class="footer-note"><a class="article-link" href="/posts/" data-route-link>← Back to posts</a></p>
         </article>
       </div>
+    `;
+  }
+
+  function renderModeration() {
+    return `
+      <section class="moderation-shell surface">
+        <div class="moderation-header">
+          <p class="meta">Private</p>
+          <h1>Moderate comments</h1>
+          <p>Review pending comments and approve or reject them. Your admin token is stored only in this browser session.</p>
+        </div>
+        <form class="moderation-token" data-moderation-token-form>
+          <label>
+            <span>Admin token</span>
+            <input name="adminToken" type="password" autocomplete="off" required>
+          </label>
+          <button class="article-link comments-submit" type="submit">Load pending →</button>
+        </form>
+        <div class="moderation-actions">
+          <button class="article-link comments-submit" type="button" data-moderation-refresh>Refresh →</button>
+          <button class="article-link comments-submit" type="button" data-moderation-clear>Clear token</button>
+        </div>
+        <p class="comments-status" data-moderation-status role="status" aria-live="polite"></p>
+        <div class="moderation-list" data-moderation-list>
+          <p class="comments-empty">Enter your admin token to load pending comments.</p>
+        </div>
+      </section>
     `;
   }
 
@@ -553,6 +583,171 @@
     attachCommentsForm(root, post.slug);
   }
 
+  function getModerationToken() {
+    return sessionStorage.getItem("clav-comments-admin-token") || "";
+  }
+
+  function setModerationStatus(message, type = "") {
+    const status = appView.querySelector("[data-moderation-status]");
+    if (!status) {
+      return;
+    }
+    status.textContent = message;
+    status.dataset.status = type;
+  }
+
+  async function fetchPendingComments(token) {
+    const response = await fetch(`${commentsApiUrl}/admin/comments?status=pending`, {
+      headers: {
+        authorization: `Bearer ${token}`
+      }
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to load pending comments");
+    }
+    return Array.isArray(data.comments) ? data.comments : [];
+  }
+
+  function renderModerationList(comments) {
+    const list = appView.querySelector("[data-moderation-list]");
+    if (!list) {
+      return;
+    }
+
+    list.textContent = "";
+
+    if (!comments.length) {
+      const empty = document.createElement("p");
+      empty.className = "comments-empty";
+      empty.textContent = "No pending comments.";
+      list.appendChild(empty);
+      return;
+    }
+
+    comments.forEach((comment) => {
+      const item = document.createElement("article");
+      item.className = "moderation-item";
+
+      const meta = document.createElement("div");
+      meta.className = "comment-meta";
+
+      const name = document.createElement("strong");
+      name.textContent = comment.author_name || "Anonymous";
+
+      const details = document.createElement("span");
+      details.textContent = `${comment.post_slug || "unknown"} · ${comment.created_at ? new Date(comment.created_at).toLocaleString("en-GB") : ""}`;
+
+      const body = document.createElement("p");
+      body.textContent = comment.body || "";
+
+      const actions = document.createElement("div");
+      actions.className = "moderation-item-actions";
+
+      const approve = document.createElement("button");
+      approve.className = "article-link comments-submit";
+      approve.type = "button";
+      approve.textContent = "Approve →";
+      approve.dataset.commentAction = "approve";
+      approve.dataset.commentId = comment.id;
+
+      const reject = document.createElement("button");
+      reject.className = "article-link comments-submit";
+      reject.type = "button";
+      reject.textContent = "Reject";
+      reject.dataset.commentAction = "reject";
+      reject.dataset.commentId = comment.id;
+
+      meta.append(name, details);
+      actions.append(approve, reject);
+      item.append(meta, body, actions);
+      list.appendChild(item);
+    });
+  }
+
+  async function loadPendingComments() {
+    const token = getModerationToken();
+    if (!token) {
+      setModerationStatus("Enter your admin token first.", "error");
+      return;
+    }
+
+    setModerationStatus("Loading pending comments...", "");
+    try {
+      const comments = await fetchPendingComments(token);
+      renderModerationList(comments);
+      setModerationStatus(`${comments.length} pending comment${comments.length === 1 ? "" : "s"}.`, "success");
+    } catch (error) {
+      renderModerationList([]);
+      setModerationStatus(error.message || "Unable to load pending comments.", "error");
+    }
+  }
+
+  async function moderateComment(id, action) {
+    const token = getModerationToken();
+    if (!token || !id || !["approve", "reject"].includes(action)) {
+      return;
+    }
+
+    setModerationStatus(`${action === "approve" ? "Approving" : "Rejecting"} comment...`, "");
+    try {
+      const response = await fetch(`${commentsApiUrl}/admin/comments/${encodeURIComponent(id)}/${action}`, {
+        method: "POST",
+        headers: {
+          authorization: `Bearer ${token}`
+        }
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to update comment");
+      }
+      setModerationStatus(`Comment ${action === "approve" ? "approved" : "rejected"}.`, "success");
+      await loadPendingComments();
+    } catch (error) {
+      setModerationStatus(error.message || "Unable to update comment.", "error");
+    }
+  }
+
+  function initModeration() {
+    const form = appView.querySelector("[data-moderation-token-form]");
+    const input = form?.querySelector("input[name='adminToken']");
+    const existingToken = getModerationToken();
+
+    if (input && existingToken) {
+      input.value = existingToken;
+      loadPendingComments();
+    }
+
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const token = input?.value.trim() || "";
+      if (!token) {
+        setModerationStatus("Enter your admin token first.", "error");
+        return;
+      }
+      sessionStorage.setItem("clav-comments-admin-token", token);
+      loadPendingComments();
+    });
+
+    appView.querySelector("[data-moderation-refresh]")?.addEventListener("click", loadPendingComments);
+    appView.querySelector("[data-moderation-clear]")?.addEventListener("click", () => {
+      sessionStorage.removeItem("clav-comments-admin-token");
+      if (input) {
+        input.value = "";
+      }
+      renderModerationList([]);
+      setModerationStatus("Admin token cleared.", "");
+    });
+
+    appView.querySelector("[data-moderation-list]")?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-comment-action]");
+      if (!button) {
+        return;
+      }
+      moderateComment(button.dataset.commentId, button.dataset.commentAction);
+    });
+  }
+
   function renderNotFound() {
     return `
       <section class="page-hero surface">
@@ -652,6 +847,8 @@
       appView.innerHTML = renderPosts();
     } else if (route.name === "about") {
       appView.innerHTML = renderAbout();
+    } else if (route.name === "moderate") {
+      appView.innerHTML = renderModeration();
     } else if (route.name === "post") {
       appView.innerHTML = renderPost(route.post);
     } else {
@@ -665,6 +862,8 @@
     attachRouteLinks();
     if (route.name === "post") {
       initComments(route.post);
+    } else if (route.name === "moderate") {
+      initModeration();
     }
     window.scrollTo(0, 0);
   }

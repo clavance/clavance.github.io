@@ -342,8 +342,8 @@
         <aside class="about-links surface" aria-label="Links">
           <a href="https://github.com/clavance" target="_blank" rel="noreferrer">github</a>
           <a href="https://linkedin.com/in/clavance" target="_blank" rel="noreferrer">linkedin</a>
-          <a href="https://calendly.com/clavance" target="_blank" rel="noreferrer">my calendar</a>
-          <a href="https://vsco.co/clavance" target="_blank" rel="noreferrer">some photographs</a>
+          <a href="https://calendly.com/clavance" target="_blank" rel="noreferrer">calendly</a>
+          <a href="https://vsco.co/clavance" target="_blank" rel="noreferrer">photos</a>
         </aside>
       </section>
     `;
@@ -356,7 +356,7 @@
           <p class="meta">${post.date}</p>
           <h1>${post.title}</h1>
           ${post.content}
-          <p class="footer-note"><a class="article-link" href="/posts/" data-route-link>&lt;-- Back to posts</a></p>
+          <p class="footer-note"><a class="article-link" href="/posts/" data-route-link>← Back to posts</a></p>
         </article>
       </div>
     `;

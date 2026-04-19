@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="title desc">
+  <title id="title">Words from legal documents represented on a grid</title>
+  <desc id="desc">A scatter plot of word vectors where related terms such as transport, fishing, countries, energy, and economic terms cluster together.</desc>
+  <rect width="920" height="620" fill="#f8f9fb"/>
+  <rect x="56" y="32" width="792" height="500" fill="#fff" stroke="#424242" stroke-width="2"/>
+  <g stroke="#d7dce5" stroke-width="1">
+    <line x1="56" y1="432" x2="848" y2="432"/>
+    <line x1="56" y1="332" x2="848" y2="332"/>
+    <line x1="56" y1="232" x2="848" y2="232"/>
+    <line x1="56" y1="132" x2="848" y2="132"/>
+    <line x1="56" y1="32" x2="56" y2="532"/>
+    <line x1="202" y1="32" x2="202" y2="532"/>
+    <line x1="348" y1="32" x2="348" y2="532"/>
+    <line x1="494" y1="32" x2="494" y2="532"/>
+    <line x1="640" y1="32" x2="640" y2="532"/>
+    <line x1="786" y1="32" x2="786" y2="532"/>
+  </g>
+  <g fill="#2b2f36" font-family="Georgia, serif" font-size="17">
+    <text x="146" y="548">−100</text>
+    <text x="344" y="548">0</text>
+    <text x="631" y="548">200</text>
+    <text x="775" y="548">300</text>
+    <text x="15" y="436">−100</text>
+    <text x="24" y="336">−50</text>
+    <text x="38" y="236">0</text>
+    <text x="28" y="136">50</text>
+    <text x="20" y="48">100</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#2b2f36">
+    <g fill="#b633cc">
+      <circle cx="118" cy="168" r="5"/><text x="126" y="172">road</text>
+      <circle cx="96" cy="184" r="5"/><text x="104" y="188">drive</text>
+      <circle cx="141" cy="119" r="5"/><text x="149" y="123">carriage</text>
+      <circle cx="164" cy="104" r="5"/><text x="172" y="108">transport</text>
+      <circle cx="190" cy="76" r="5"/><text x="198" y="80">shipping</text>
+    </g>
+    <g fill="#e62927">
+      <circle cx="368" cy="108" r="5"/><text x="376" y="112">sea</text>
+      <circle cx="390" cy="135" r="5"/><text x="398" y="139">fishing</text>
+      <circle cx="412" cy="169" r="5"/><text x="420" y="173">fishery</text>
+      <circle cx="409" cy="202" r="5"/><text x="417" y="206">fisheries</text>
+      <circle cx="441" cy="222" r="5"/><text x="449" y="226">aquaculture</text>
+    </g>
+    <g fill="#173df5">
+      <circle cx="245" cy="315" r="5"/><text x="253" y="319">residue</text>
+      <circle cx="229" cy="358" r="5"/><text x="237" y="362">pollution</text>
+      <circle cx="219" cy="390" r="5"/><text x="227" y="394">environmental</text>
+      <circle cx="200" cy="424" r="5"/><text x="208" y="428">energy</text>
+      <circle cx="164" cy="433" r="5"/><text x="172" y="437">nuclear</text>
+    </g>
+    <g fill="#3f9632">
+      <circle cx="175" cy="496" r="5"/><text x="183" y="500">economic</text>
+      <circle cx="204" cy="502" r="5"/><text x="212" y="506">financial</text>
+      <circle cx="238" cy="522" r="5"/><text x="246" y="526">monetary</text>
+      <circle cx="280" cy="490" r="5"/><text x="288" y="494">deficit</text>
+      <circle cx="145" cy="497" r="5"/><text x="66" y="501">investment</text>
+    </g>
+    <g fill="#111">
+      <circle cx="760" cy="72" r="5"/><text x="768" y="76">spain</text>
+      <circle cx="770" cy="103" r="5"/><text x="778" y="107">europe</text>
+      <circle cx="795" cy="108" r="5"/><text x="803" y="112">poland</text>
+      <circle cx="825" cy="80" r="5"/><text x="833" y="84">czech</text>
+      <circle cx="812" cy="136" r="5"/><text x="820" y="140">estonia</text>
+    </g>
+  </g>
+  <text x="146" y="575" fill="#000" font-family="Georgia, serif" font-size="25">Words from a dataset of legal documents represented on a grid.</text>
+  <text x="105" y="604" fill="#000" font-family="Georgia, serif" font-size="25">As of 31 January, it is unclear where the word ‘britain’ would be placed.</text>
+</svg>

@@ -15,10 +15,10 @@
   const ctx = canvas.getContext("2d");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let audioEnabled = false;
-  let homeScene = "waves";
+  let homeScene = "fractal";
   let postsPage = 0;
   let theme = localStorage.getItem("clav-theme") || "dark";
-  const homeScenes = ["waves", "fractal", "circles", "patterns", "code"];
+  const homeScenes = ["fractal", "waves", "circles", "patterns", "code"];
   let patternField = {
     x: window.innerWidth * 0.5,
     y: window.innerHeight * 0.5
@@ -37,166 +37,7 @@
     "{","}","(",")","[","]",";","=>","++","--","?.","??","&&","||","!==","===","<",">","+","-","*","/"
   ];
 
-  const posts = [
-    {
-      slug: "sand-hill-road",
-      date: "5 March 2022",
-      title: "Secrets of Sand Hill Road",
-      excerpt: "Reading notes on pitching, market sizing, venture expectations, and what founders need to communicate clearly.",
-      description: "Notes on pitching, venture capital, and communicating market size.",
-      content: `
-        <h2>The Art of the Pitch</h2>
-        <h3>Getting your foot in the door</h3>
-        <p>Securing a warm introduction is essential. Sources include angels, seed investors, and law firms that work with startup founders and venture capitalists. These intermediaries benefit when their best startups connect with VCs. If you lack these connections, find alternative pathways.</p>
-        <p>You'll need a combination of qualities: likability, networking ability, hustle, consistent showing up, follow-up persistence, salesmanship, confidence, relevant experience, storytelling skills, and luck.</p>
-        <h3>1: Market Sizing</h3>
-        <p>Founders must help VCs understand market size. When Lyft pitched, evaluators initially used the existing taxi market as a baseline. However, Lyft argued that GPS, smartphones, and apps fundamentally expanded the addressable market. They highlighted how driver economics changed—eliminating taxi medallion requirements increased driver supply, creating network effects where more drivers attracted customers and vice versa.</p>
-        <p>Network effects apply beyond ride-sharing and social platforms. Freenome illustrated this by arguing that less invasive cancer screening techniques with better predictive value would increase screening rates, expanding the early detection market.</p>
-        <p>For existing markets, explain the macro trends driving evolution and your unique opportunity. Okta exemplifies this approach. Microsoft's Active Directory dominated enterprise login management for internal applications. Okta identified that the rise of SaaS meant companies would deploy numerous external applications across departments, each requiring separate access management—creating a new market opportunity. Okta's market capitalisation reached $25 billion (previously $45 billion).</p>
-        <p>For non-existent markets, imagine how new technologies create demand. Burbn recognised that iPhones would dominate and people would want photo-sharing capabilities. While photo-sharing existed previously, the market fundamentally changed. Burbn became Instagram.</p>
-        <h3>2: Team</h3>
-        <p>"Ideas are a dime a dozen, execution sets the winners apart" reflects VC thinking. Demonstrate founder-market fit—your unique qualifications for winning this market. Nicira's founder possessed a PhD in the relevant field, though deep expertise can take other forms like go-to-market strategy expertise.</p>
-        <p>Discuss your wins and failures, explaining what they reveal about your likelihood of succeeding. Address how you'll build the right team around you and why talented people would leave their jobs to work for you.</p>
-        <h3>3: Product</h3>
-        <p>VCs don't expect accurate market predictions. Your pitched product likely won't match your final offering. They evaluate your thinking process: How does your mind work? What market data informed your initial product plan? How is your product 10x superior to incumbents?</p>
-        <p>Demonstrate "strong beliefs, weakly held"—maintain conviction while remaining adaptable to market feedback.</p>
-        <h3>4: Go-to-Market</h3>
-        <p>Profitable customer acquisition determines long-term viability. Can your business model support your acquisition strategy? Whether through outside sales, brand marketing, or online channels, customer acquisition costs must align with customer lifetime value.</p>
-        <p>You need a framework demonstrating your thinking, not robust financial models. Okta initially targeted SMEs, believing they were more open to new technologies and lacked large teams to manage systems. In reality, enterprise sales proved superior—large companies had numerous SaaS applications across departments, creating better value propositions.</p>
-        <p>You'll likely pivot significantly. Tiny Speck's game evolved into Speck, then Slack. Master your domain, understand every important business detail, and show preparation. When VCs challenge your proposals, defend thoughtfully, listen, and adjust appropriately rather than immediately pivoting.</p>
-        <h3>5: Next Financing Round</h3>
-        <p>What milestones will this funding enable? Your VC projects ahead to the next round to gauge market risk. They need you achieving your aims; they can't be your sole capital provider later.</p>
-        <p>Ensure your funding is sufficient to reach milestones enabling a higher-valuation next round. If not, discuss raising more capital at the current round, lowering current valuation, or finding other confidence-building approaches.</p>
-        <p>Generally, target doubling your valuation at the next round.</p>
-        <h2>Raising Capital</h2>
-        <h3>Is VC the right option?</h3>
-        <p>VCs prioritise market size—the opportunity must support a self-sustaining, standalone business. If your market isn't huge, smaller VC funds or non-VC options may suit you better.</p>
-        <p>Remember VCs respond to their financial incentives: building diversified portfolios where most investments fail but a few generate disproportionate returns, then converting successes to cash for limited partners.</p>
-        <h3>How much, and at what valuation?</h3>
-        <p>Raise sufficient capital to safely achieve next-round milestones. Think about your subsequent round during current fundraising. Next-round valuation reflects your current business state and financing environment. If your last round valuation seems too high, you might fail generating next-round competition.</p>
-        <p>Don't raise minimal capital at aggressive valuations—this establishes high watermarks without providing resources to achieve expectations. Market competition drives valuations; VCs may decline if previous rounds appear overvalued.</p>
-        <p>Disappointing fundraising affects employee sentiment. Monzo circa 2020 demonstrated this. Valuations serve as visible external success benchmarks for employees.</p>
-        <p>LoudCloud taught valuable lessons: employees judge business success by valuation; they benchmark against recent fundraising (sometimes irrelevantly); and maintaining upward momentum through successful rounds keeps your valuation trajectory positive.</p>
-        <h2>Term Sheets</h2>
-        <h3>Building your cap table</h3>
-        <p>Raise sufficient current-round capital enabling next-round milestone achievement. If offered deals with more capital but more dilution, ask whether extra capital enables greater achievement than anticipated.</p>
-        <p>Understand the tradeoff between known current dilution and forecasted next-round dilution under various business performance scenarios. Study your payout matrix showing how exit proceeds divide between common and preferred shareholders at different price points.</p>
-        <p>Investors might condition offers on earlier investors waiving antidilution protections.</p>
-        <h3>Evaluating governance terms</h3>
-        <p>These notes reference U.S. terms. Consider preferred versus Series A voting structures and potential board composition. Will a common-controlled board exist? Who will control the board—who influences major corporate decisions?</p>
-        <p>Look beyond valuation, considering full economic and governance term sets.</p>
-        <h2>Board Members</h2>
-        <h3>Dual fiduciaries</h3>
-        <p>VCs are dual fiduciaries. As board members, they have fiduciary duties to company shareholders, but as GPs they're fiduciaries to their LPs. GP economic interests may diverge from common shareholders', particularly regarding different share classes.</p>
-        <h3>The Board's role</h3>
-        <p>Boards interact with CEOs—they hire and fire—but CEOs possess more company knowledge. VCs sometimes become entangled in day-to-day operations. As CEO, engage board members understanding why they're overstepping. Are they unwitting? Do they harbor deeper management concerns?</p>
-        <p>Boards provide long-term strategic guidance and lessons learned, not dictated strategy. They advise on capital raising; they'll eventually approve actions.</p>
-        <h3>Approval of corporate actions</h3>
-        <p>U.S. law requires boards determining fair market value for stock option issuance. If exercise prices fall below fair market value, employees face immediate tax liability on the difference—don't create employee tax problems. Consider 409A opinions (valid 12 months without material changes) from outside firms.</p>
-        <p>Review CEO and executive compensation ensuring critical people maintain sufficient economic incentive. Unvested stock options provide these incentives—key contributors need sufficient unvested equity.</p>
-        <p>Boards maintain compliance and corporate governance, protecting themselves from personal liability through regular meetings. VCs should open their networks to CEOs' benefit, introducing customers, partners, candidates, advisors, lawyers.</p>
-        <p>Boards should not run companies, dictate strategy, or dictate product direction. Address board overreach. CEOs must manage boards—set expectations, hold regular 1:1s, explain your expectations of them, clarify board meeting formats, sharing feedback both directions. Good board members notify CEOs when executive team members request separate meetings.</p>
-        <h2>Legal Obligations</h2>
-        <h3>General duties</h3>
-        <p>Directors owe duties of care, loyalty (avoiding self-dealing, acting in company interests), confidentiality, and candor (disclosing requisite shareholder information).</p>
-        <p>Confidentiality becomes complicated when VCs invest in competing companies, especially after portfolio company pivots creating competition. Implement Chinese walls.</p>
-        <p>The business judgment rule protects boards acting on informed bases, in good faith, believing their actions served corporate interests.</p>
-        <p>The entire fairness rule applies when claimants show loyalty duty violations. The burden shifts to boards proving they acted in company interests. Courts examine decision-making process fairness and whether common shareholders received fair treatment.</p>
-        <p>Directors cannot indemnify against loyalty breaches—they face personal liability—though they can indemnify against care duty breaches.</p>
-        <h3>In Re Trados</h3>
-        <p>Trados faced liquidation with $57.9M investor liquidation preference against a $60M acquisition offer. The board instituted a $7.8M management incentive plan for senior executives.</p>
-        <p>Initially: $57.9M for investors, $2.1M for common shareholders. After the plan: $7.8M for executives, $52.2M for investors, $0 for common shareholders.</p>
-        <p>If you're a board member with liquidation preference and selling out-of-the-money, assume you're conflicted.</p>
-        <h3>Things to note</h3>
-        <p>Startup boards likely contain conflicted members through liquidation preferences and management incentive plan participation.</p>
-        <p>Consider: hiring bankers soliciting multiple bids (if affordable); reaching out to several parties; obtaining fairness opinions; avoiding incentive plan changes immediately preceding deal votes; establishing special committees isolating conflicted members; implementing disinterested common shareholder votes; ensuring boards don't overstep acquisition roles; documenting discussions on record regarding fiduciary duties and common shareholder rights.</p>
-        <h2>Difficult Financings</h2>
-        <h3>Reducing liquidation preferences</h3>
-        <p>Term sheets can include auto-converts, where preferred stock converts to common under certain circumstances, eliminating accumulated liquidation preferences. VCs might accept this recognising overhanging preferences may discourage current teams.</p>
-        <p>Reverse splits convert existing preferred stock to common, reducing the investor's ownership percentage through a split. VCs might accept this to provide employees fresh starts by reducing fundraising dilution, or to attract new capital.</p>
-        <p>Down rounds or recapitalisations are often led by existing investors. Discuss near-term exit valuation ranges with existing VCs, sizing remaining preferences appropriately.</p>
-        <p>Increase option pools and grant new options to remaining employees. If departing employees' options expire, return those to the pool for staying employees. Increase the overall pool. Management incentive plans can include "no double dipping" clauses—if common shareholders ultimately receive acquisition proceeds, management share reduces pro rata, preventing double-benefits.</p>
-        <h3>Carsanaro v Bloodhound</h3>
-        <p>This company sold for $82M, but founders and common shareholders received almost nothing. Preferred shareholders took most money satisfying liquidation preferences, while a $15M management incentive plan consumed additional proceeds.</p>
-        <p>Fair process and fair price standards applied. The board failed to canvass outside investors, gauge external interest before insider-led financing, provide complete common shareholder information, update financing terms when performance improved, or obtain disinterested member approval.</p>
-        <p>Run market checks with outside investors. Even if believing no one will take the deal, solicit rejections before proceeding with insider rounds, proving lack of market interest.</p>
-        <p>Don't entangle new option grants to employees closely with insider financing. Doing so after closing (versus before) eliminates suspicion that a board member's vote depended on receiving new grants.</p>
-        <p>Offer rights offerings—everyone on the cap table gets pro rata participation rights on identical terms. Most will decline down rounds, but this protects against future litigation.</p>
-        <p>Implement "go-shop" provisions allowing companies to shop term sheets to other potential investors—proactive market checks.</p>
-        <p>Obtain disinterested shareholder approval if possible.</p>
-        <h3>Winding down</h3>
-        <p>U.S. law requires providing employees 60 days' notice before shutdown via the WARN Act, or paying 60 days' wages liability. The faltering company exception applies if actively pursuing financing and notice would jeopardise financing chances. Keep minutes documenting obligation compliance if exercising exceptions.</p>
-        <p>Potential wage and accrued vacation liabilities exist. You can't sustain employees beyond affordable payroll—doing so creates personal liability. Accrued vacation represents earned employee money. Avoid high accrued vacation through use-it-or-lose-it annual provisions.</p>
-        <p>In wind-downs, debt holders precede unsecured trade creditors and equity holders, though boards lack fiduciary duties to them.</p>
-        <h2>Exits</h2>
-        <h3>Acquisitions</h3>
-        <p>Know eventual acquirers, engage with them. You need not expose trade secrets, IP, or road maps—just build relationships and disclose what you're comfortable sharing. Non-acquisition partners may provide business development value.</p>
-        <p>"Companies get bought, not sold"—you can't unilaterally decide to sell expecting numerous suitors. Better to have acquirers solicit your interest. You want to be on their acquisition target lists.</p>
-        <p>Consider: price obviously; consideration form (cash versus buyer stock?—consider "collars" setting reasonable price movement bounds between announcement and closing); buyer stock liquidity if private; employee option treatment.</p>
-        <p>Unvested options get assumed by acquirers, continuing vest schedules under new employers. Alternatively, they get cancelled with new option terms. Rarely, they accelerate automatically—reserved for special cases like CFOs unable to transition to acquirer roles.</p>
-        <p>Think about which acquired employees remain critical. Acquirers maintain key employee lists and incentivise accordingly. Critical employees may request additional incentives. Acquirers typically create closing conditions.</p>
-        <p>Address voting approvals, usually requiring majority common and preferred shareholder votes as separate classes. Drag-along provisions typically apply.</p>
-        <p>Consider escrow accounts covering post-acquisition surprises and indemnification claims. Which claims get covered beyond escrow? What recovery limits exist? What exclusivity periods are fair? Typically 60 days, gauged by remaining due diligence and documentation time.</p>
-        <p>Board responsibilities include Revlon duties—while boards needn't sell, if they do, they must maximise common stock value in good faith, seeking best reasonably available prices. Run broad multiple-acquirer outreach using bankers if possible. Consider alternative paths. Employ go-shop provisions permitting competing bids. Document well-vetted processes showing consideration of all value-maximisation possibilities.</p>
-        <p>Often you'll integrate into post-acquisition organisations, requiring thought about integration and new organisational roles.</p>
-        <h3>IPOs</h3>
-        <p>IPOs provide capital raising, branding, liquidity, and customer credibility—especially valuable in B2B selling.</p>
-        <p>The process involves underwriters, prospectus drafting, roadshows, confidential filings, and required disclosures.</p>
-      `
-    },
-    {
-      slug: "lessons-in-management",
-      date: "9 May 2018",
-      title: "Lessons in Management",
-      excerpt: "Notes on customer obsession, long-term thinking, and the habits that help teams stay adaptable under pressure.",
-      description: "Notes on customer obsession, invention, and long-term thinking.",
-      content: `
-        <p><em>"Some people are just better at rolling with the punches."</em></p>
-        <ol>
-          <li>
-            <p><strong>Customer obsession:</strong> there are many ways to centre a business, each can be successful — competitor obsession (close following, replicating quickly), technology obsession, product obsession, business model obsession. Amazon's choice: customer obsession.</p>
-          </li>
-          <li>
-            <p><strong>Willingness to innovate and pioneer:</strong> customer obsession isn't just about listening to customers, it's <em>inventing on their behalf</em> — your customer may not even know what they want, it's your job to invent it.</p>
-          </li>
-          <li>
-            <p><strong>Be long-term oriented:</strong> think in 5–7 year time frames (<em>"Today, I'm working on a financial quarter in 2020… not next quarter, that was fully-baked about three years ago"</em>) — this affects how you spend your time, energy, how you plan.</p>
-            <ul><li>Long-term thinking has to be deliberate, we want quick results by nature — ever heard of a <em>get rich slow scheme</em>?</li></ul>
-          </li>
-          <li>
-            <p><strong>Experiment more.</strong> What worries Jeff? That Amazon will lose the three above principles; failure and invention are inseparable.</p>
-            <ul>
-              <li><em>To invent you need to experiment. If you know in advance it's going to work, it's not an experiment!</em></li>
-              <li><em>If you have a 10% chance of a 100x return, you should take that shot every time. You'll still be wrong 9 out of 10 times.</em></li>
-              <li><em>If you swing for the fences, you'll hit more home runs, but you'll strike out more. But in baseball you're capped at four runs. In business, every once in a while, you hit so hard you get a thousand runs.</em></li>
-            </ul>
-          </li>
-          <li>
-            <p>One problem with young entrepreneurs: they like to talk about how <em>disruptive</em> their business plan is going to be. <em>Invention is not disruptive. Only customer adoption is disruptive.</em> We've invented a lot of things — that customers did not care about at all! They were not disruptive. Only when customers like the new way, can anything become disruptive. Hence: customer obsession.</p>
-            <ul><li>So if someone says their idea is disruptive, the question to ask them is: <em>why are customers going to adopt this?</em></li></ul>
-          </li>
-          <li>
-            <p><em>"I've noticed all overnight successes take about ten years."</em></p>
-          </li>
-          <li>
-            <p><strong>Failure:</strong> there is a type of failure you don't want, where you have an operating history and you know what you're doing, and you just screw it up; that's just a screw up — e.g. fulfilment centre technology, by now, can't fail. Bad execution is not the right kind of failure. The right kind of failure is failure when trying to innovate.</p>
-          </li>
-          <li>
-            <p><strong>Identify your big ideas</strong> — there should only be 2 or 3 of them. <em>Then enforce great execution against these big ideas.</em> Usually the big ideas are incredibly easy to identify.</p>
-            <ul>
-              <li>Amazon's 3 big ideas: (1) Low prices, (2) Fast delivery, (3) Vast selection.</li>
-              <li>These should not change over time — at no point ever in the future will customers want higher prices, slower delivery, or less selection.</li>
-              <li>But executing against these big ideas, that's the hard part — how do we always get costs a little lower? How do we always deliver more quickly?</li>
-              <li>These principles apply to other sectors as well — find the big ideas that will always still be true, invest in them.</li>
-            </ul>
-          </li>
-          <li>
-            <p>AI, machine learning, natural language understanding, machine vision problems: these will help every business and every institution.</p>
-          </li>
-        </ol>
-      `
-    }
-  ];
+  const posts = Array.isArray(window.CLAV_POSTS) ? window.CLAV_POSTS : [];
 
   const pointer = {
     x: window.innerWidth * 0.65,
@@ -408,6 +249,9 @@
     if (path === "/posts/") {
       return { name: "posts", title: "Posts - Clavance Lim", description: "Writing and notes by Clavance Lim." };
     }
+    if (path === "/about/") {
+      return { name: "about", title: "About - Clavance Lim", description: "About Clavance Lim." };
+    }
 
     const postMatch = path.match(/^\/posts\/([^/]+)\/$/);
     if (postMatch) {
@@ -453,8 +297,9 @@
 
   function renderPosts() {
     const POSTS_PER_PAGE = 10;
-    const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
-    const pagePosts = posts.slice(postsPage * POSTS_PER_PAGE, (postsPage + 1) * POSTS_PER_PAGE);
+    const sortedPosts = posts.slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+    const totalPages = Math.ceil(sortedPosts.length / POSTS_PER_PAGE);
+    const pagePosts = sortedPosts.slice(postsPage * POSTS_PER_PAGE, (postsPage + 1) * POSTS_PER_PAGE);
 
     const pagination = totalPages > 1 ? `
       <div class="posts-pagination">
@@ -470,7 +315,10 @@
             <p class="meta">${post.date}</p>
             <h3>${post.title}</h3>
             <p>${post.excerpt}</p>
-            <a class="article-link" href="/posts/${post.slug}/" data-route-link>Read more →</a>
+            ${post.pdf
+              ? `<a class="article-link" href="${post.pdf}" target="_blank" rel="noreferrer">Read more →</a>`
+              : `<a class="article-link" href="/posts/${post.slug}/" data-route-link>Read more →</a>`
+            }
           </article>
         `).join("")}
       </section>
@@ -478,6 +326,28 @@
     `;
   }
 
+  function renderAbout() {
+    return `
+      <section class="about-page">
+        <article class="about-card surface">
+          <h1>Hello! 👋</h1>
+          <div class="about-copy">
+            <img class="about-image" src="https://clav.dev/profile.jpeg" alt="Portrait of Clavance Lim">
+            <div class="about-bio">
+              <p>Software engineer and former legal professional with an interest in electronic music production, portfolio management, Dharmic religious philosophy, and more recently, mental and spiritual wellness practices.</p>
+              <p>Currently splitting my time between London and Asia.</p>
+            </div>
+          </div>
+        </article>
+        <aside class="about-links surface" aria-label="Links">
+          <a href="https://github.com/clavance" target="_blank" rel="noreferrer">github</a>
+          <a href="https://linkedin.com/in/clavance" target="_blank" rel="noreferrer">linkedin</a>
+          <a href="https://calendly.com/clavance" target="_blank" rel="noreferrer">my calendar</a>
+          <a href="https://vsco.co/clavance" target="_blank" rel="noreferrer">some photographs</a>
+        </aside>
+      </section>
+    `;
+  }
 
   function renderPost(post) {
     return `
@@ -486,7 +356,7 @@
           <p class="meta">${post.date}</p>
           <h1>${post.title}</h1>
           ${post.content}
-          <p class="footer-note"><a href="/posts/" data-route-link>Back to posts</a></p>
+          <p class="footer-note"><a class="article-link" href="/posts/" data-route-link>&lt;-- Back to posts</a></p>
         </article>
       </div>
     `;
@@ -511,7 +381,8 @@
       const href = normalizePath(link.getAttribute("href"));
       const isCurrent =
         (route.name === "home" && href === "/") ||
-        ((route.name === "posts" || route.name === "post") && href === "/posts/");
+        ((route.name === "posts" || route.name === "post") && href === "/posts/") ||
+        (route.name === "about" && href === "/about/");
       if (isCurrent) {
         link.setAttribute("aria-current", "page");
       } else {
@@ -588,6 +459,8 @@
     } else if (route.name === "posts") {
       postsPage = 0;
       appView.innerHTML = renderPosts();
+    } else if (route.name === "about") {
+      appView.innerHTML = renderAbout();
     } else if (route.name === "post") {
       appView.innerHTML = renderPost(route.post);
     } else {
@@ -1109,7 +982,6 @@
     const lines = codeWall.lineCount || Math.max(12, Math.floor((bottom - top) / lineHeight));
     const charsPerLine = codeWall.charsPerLine || Math.max(80, Math.floor((right - left) / charWidth));
     const pointerNormX = Math.max(0, Math.min(1, patternField.x / Math.max(1, width)));
-    const pointerNormY = Math.max(0, Math.min(1, patternField.y / Math.max(1, height)));
     const motion = Math.min(1.6, Math.hypot(pointer.vx, pointer.vy) / 48 + pointer.energy * 0.35);
     const activeLine = Math.max(0, Math.min(lines - 1, Math.floor(((patternField.y - top) / Math.max(1, bottom - top)) * lines)));
     const activeChar = Math.max(0, Math.min(charsPerLine - 1, Math.floor(pointerNormX * charsPerLine)));
@@ -1137,18 +1009,10 @@
         const mutated = text.slice(0, start) + tokenText + text.slice(end);
         codeWall.lines[line] = mutated;
         const highlightX = left + start * charWidth;
-        const highlightWidth = Math.max(charWidth * 2, (end - start) * charWidth);
-
-        const highlight = ctx.createLinearGradient(highlightX, 0, highlightX + highlightWidth, 0);
-        highlight.addColorStop(0, "rgba(96, 244, 255, 0.08)");
-        highlight.addColorStop(0.5, "rgba(255, 255, 255, 0.12)");
-        highlight.addColorStop(1, "rgba(255, 95, 225, 0.08)");
-        ctx.fillStyle = highlight;
-        ctx.fillRect(highlightX, y - 1, highlightWidth, lineHeight + 2);
 
         ctx.fillStyle = `hsla(${hue} 72% 78% / ${alpha})`;
         ctx.fillText(mutated.slice(0, start), left, y);
-        ctx.fillStyle = `hsla(${(hue + 86) % 360} 96% 78% / 0.95)`;
+        ctx.fillStyle = `hsla(${(hue + 86) % 360} 96% 74% / 0.9)`;
         ctx.fillText(tokenText, highlightX, y);
         ctx.fillStyle = `hsla(${hue} 72% 78% / ${alpha})`;
         ctx.fillText(mutated.slice(end), left + end * charWidth, y);
